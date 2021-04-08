@@ -7,14 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  usuario: any = {nome: 'Arthur Bandeira', email: 'arthur.baandeira@hotmail.com'};
-
+  public usuario: any = {nome: 'Arthur Bandeira', email: 'arthur.baandeira@hotmail.com'};
 
   public appPages = [
-    { title: 'Inicio', url: '/inicio', icon: 'home' },
+    { title: 'Inicio', url: 'paginaInicial', icon: 'home' },
     { title: 'Cardápio', url: 'cardapio', icon: 'fast-food' },
     { title: 'Meus Pedidos', url: '/folder/Meus Pedidos', icon: 'cart' },
-    { title: 'Meus Dados', url: '/folder/Meus Dados', icon: 'person' },
+    { title: 'Meus Dados', url: 'meusDados', icon: 'person' },
     { title: 'Sair', url: '/folder/Trash', icon: 'log-out' },
   ];
 

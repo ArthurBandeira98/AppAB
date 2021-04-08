@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Meus dados</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+  <ion-list class="borda">
+    <ion-item>
+      <ion-textarea 
+          value="{{ usuario.nome == '' ? '' : usuario.nome }}" 
+          placeholder="{{ usuario.nome == '' ? 'Insira seu nome...' : '' }}"
+          [disabled]="desabilitar ? false : true"
+          #nome="ngModel"
+          ngModel
+          >Nome</ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea 
+          value="{{ usuario.email == '' ? '' : usuario.email }}" 
+          placeholder="{{ usuario.email == '' ? 'Insira seu email...' : '' }}"
+          [disabled]="desabilitar ? false : true"
+          #email="ngModel"
+          ngModel
+          >Email</ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea 
+          value="{{ usuario.telefone == '' ? '' : usuario.telefone }}" 
+          placeholder="{{ usuario.telefone == '' ? 'Insira seu telefone...' : '' }}"
+          [disabled]="desabilitar ? false : true"
+          #telefone="ngModel"
+          ngModel
+          >Telefone</ion-textarea>
+    </ion-item>
+    <ion-button color="danger" (click)="habilitaCampos()">Alterar</ion-button>
+    <ion-button color="success" (click)="saveForme(form)">Salvar</ion-button>
+  </ion-list>
+
+</ion-content>

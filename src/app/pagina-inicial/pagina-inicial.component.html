@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">BANDEIRA'S</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-text-center">
+  <br>
+  <ion-label><h2>Seja bem vindo (a) a Pizzaria BANDEIRA'S</h2></ion-label>  
+  <br>
+  <ion-chip color="success" >
+    <ion-label color="green">Aberto das 18h30 as 00h00</ion-label>
+  </ion-chip>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div>
+    <ion-button color="danger" shape="round" size="large" [routerLink]="['/cardapio']">Ver Cardápio</ion-button>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div>
+    <ion-list>
+      <ion-list-header>
+        <ion-label><h2>Formas de Pagamento</h2></ion-label>
+      </ion-list-header>
+      <ion-item>
+        <h4><ion-icon name="cash" class="espaco"></ion-icon>Dinheiro</h4>
+      </ion-item>
+      <ion-item>
+        <h4><ion-icon name="card" class="espaco"></ion-icon>Crédito</h4>
+      </ion-item>
+      <ion-item>
+        <h4><ion-icon name="card" class="espaco"></ion-icon>Débito</h4>
+      </ion-item>
+      <ion-item>
+        <h4><ion-icon name="card" class="espaco"></ion-icon>VR</h4>
+      </ion-item>
+    </ion-list>
+  </div>
+  <br>
+  <ion-label><ion-icon name="call" class="espaco"></ion-icon>Telefone: 9999-9999</ion-label>
+
+
+</ion-content>

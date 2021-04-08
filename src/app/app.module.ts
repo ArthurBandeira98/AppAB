@@ -7,9 +7,11 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CardapioComponent } from './cardapio/cardapio.component';
+import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
+import { MeusDadosComponent } from './meus-dados/meus-dados.component';
 
 @NgModule({
-  declarations: [AppComponent, CardapioComponent],
+  declarations: [AppComponent, CardapioComponent, PaginaInicialComponent, MeusDadosComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

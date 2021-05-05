@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { CardapioService } from '../service/cardapio.service';
 
 @Component({
   selector: 'app-cardapio',
@@ -10,9 +11,13 @@ export class CardapioComponent implements OnInit{
 
   private produtos = [];
 
-  constructor(public alertController: AlertController) { }
+  constructor(
+    public alertController: AlertController,
+    private cardapioService: CardapioService
+    ) { }
 
   ngOnInit() {
+    this.cardapioService.buscaCardapio();
     this.produtos = [
       { nome: 'Mussarela', valor: 'R$ 10,00', descricao: 'Queijo, tomato e azeitona', quantidade: 0 },
       { nome: 'Portuguesa', valor: 'R$ 10,00', descricao: 'Queijo, ovo, presunto, palmito e azeitona', quantidade: 0 },

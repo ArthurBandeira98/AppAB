@@ -1,7 +1,9 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 import { Cardapio } from '../model/cardapio';
+
 
 @Injectable({
   providedIn: 'root'
@@ -12,8 +14,8 @@ export class CardapioService {
 
   constructor(private http: HttpClient) { }
 
-  buscaCardapio(): Observable<Cardapio[]> {
-    return this.http.get<Cardapio[]>(this.lancamentoUrl).pipe();
+  getCardapio(): Observable<Cardapio[]> {
+    return this.http.get<Cardapio[]>(`${this.lancamentoUrl}`);
   }
 
   handleError(error: HttpErrorResponse) {

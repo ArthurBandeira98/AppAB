@@ -10,11 +10,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { CardapioComponent } from './cardapio/cardapio.component';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { MeusDadosComponent } from './meus-dados/meus-dados.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, CardapioComponent, PaginaInicialComponent, MeusDadosComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

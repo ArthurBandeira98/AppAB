@@ -12,8 +12,9 @@ export class AppComponent {
   public appPages = [
     { title: 'Inicio', url: 'paginaInicial', icon: 'home' },
     { title: 'Cardápio', url: 'cardapio', icon: 'fast-food' },
-    { title: 'Meus Pedidos', url: '/folder/Meus Pedidos', icon: 'cart' },
+    { title: 'Meus Pedidos', url: 'meuspedidos', icon: 'cart' },
     { title: 'Meus Dados', url: 'meusDados', icon: 'person' },
+    { title: 'Funcionarios', url: 'funcionarios', icon: 'person' },
     { title: 'Sair', url: '/folder/Trash', icon: 'log-out' },
   ];
 
